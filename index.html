@@ -30,8 +30,8 @@
         .youtube-button { /* Specific style for YouTube link button */
             @apply inline-flex items-center justify-center bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105 text-lg;
         }
-        .youtube-button svg {
-            @apply w-6 h-6 mr-2;
+        .youtube-button img { /* Style for the image logo inside the button */
+            @apply w-7 h-auto mr-2; /* Adjust size as needed, h-auto maintains aspect ratio */
         }
         .submit-button {
              @apply w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105 text-lg;
@@ -297,12 +297,12 @@
     </section>
 
     <section id="product-video" class="py-16 bg-white">
-        <div class="container mx-auto px-6 text-center"> <h2 class="text-3xl font-bold text-gray-800 mb-12">Video Giới Thiệu Lốp LINGLONG COMFORT MASTER</h2>
+        <div class="container mx-auto px-6 text-center"> 
+            <h2 class="text-3xl font-bold text-gray-800 mb-12">Video Giới Thiệu Lốp LINGLONG COMFORT MASTER</h2>
             <div class="max-w-3xl mx-auto">
                  <a href="https://www.youtube.com/shorts/5ryxCu5A0qY" target="_blank" rel="noopener noreferrer" class="youtube-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.78 22 12 22 12s0 3.22-.42 4.814a2.504 2.504 0 01-1.768 1.768c-1.594.42-6.392.42-6.392.42s-4.798 0-6.392-.42a2.504 2.504 0 01-1.768-1.768C2.002 15.22 2 12 2 12s0-3.22.42-4.814a2.504 2.504 0 011.768-1.768C5.78 2.002 10.578 2 10.578 2s4.798 0 6.392.42M9.75 15.5V8.5l6 3.5-6 3.5z" clip-rule="evenodd"></path>
-                    </svg>
+                    <img src="youtube_logo.png" alt="YouTube Logo" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/24x24/FF0000/FFFFFF?text=YT'; this.style.width='24px'; this.style.height='24px';">
                     Xem Video trên YouTube
                 </a>
             </div>
