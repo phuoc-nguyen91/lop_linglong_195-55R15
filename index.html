@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lốp LINGLONG 195/55R15 COMFORT MASTER - Ưu Đãi Hấp Dẫn!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-bg {
+            background-image: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('cheasel.jpg'); /* Updated background image */
+            background-size: cover;
+            background-position: top center; /* Adjusted for better visibility of image content */
+            min-height: 70vh; /* Ensure a minimum height for the hero section */
+            display: flex; /* Added for vertical centering of content */
+            align-items: center; /* Added for vertical centering of content */
+        }
+        .form-input {
+            @apply w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition duration-150 ease-in-out;
+        }
+        .form-label {
+            @apply block text-sm font-medium text-gray-700 mb-1;
+        }
+        .cta-button {
+            @apply w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105 text-lg;
+        }
+        .submit-button {
+             @apply w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105 text-lg;
+        }
+        .submit-button:disabled {
+            @apply bg-gray-400 cursor-not-allowed;
+        }
+        /* Custom modal styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1000; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 24px;
+            border: 1px solid #888;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .modal-close-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 16px;
+        }
+        .modal-close-button:hover {
+            background-color: #45a049;
+        }
+
+        /* Image gallery styles & zoom effect */
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .gallery-item { /* Added for gallery image zoom container */
+            overflow: hidden; /* Prevent zoom overflow */
+            border-radius: 8px;
+        }
+        .gallery-item img, .product-image-zoomable { /* Applied to gallery images and main product image */
+            width: 100%;
+            height: auto;
+            object-fit: cover; 
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease-in-out; /* Smooth zoom transition */
+        }
+        .gallery-item img:hover, .product-image-zoomable:hover {
+            transform: scale(1.15); /* Increased zoom effect */
+        }
+        .main-product-image-container { /* Container for main product image zoom */
+            overflow: hidden;
+            border-radius: 8px; /* Match image radius */
+            display: inline-block; /* To wrap the image tightly */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Optional: enhanced shadow for zoomed image container */
+        }
+
+        .header-logo {
+            height: 60px; 
+            width: auto;
+        }
+        .qr-code-image {
+            width: 200px; 
+            height: auto;
+            border: 2px solid #e5e7eb; 
+            border-radius: 8px;
+            padding: 8px; 
+            background-color: white; 
+        }
+        .loader {
+            border: 4px solid #f3f3f3; 
+            border-top: 4px solid #3498db; 
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+            display: inline-block;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .info-section ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .info-section li {
+            margin-bottom: 0.5rem;
+        }
+        .info-section h3 {
+            @apply text-2xl font-semibold text-gray-800 mb-4 mt-6;
+        }
+        .info-section .highlight {
+            @apply text-green-600 font-semibold;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#">
+                <img src="logo.png" alt="LINGLONG TIRE Logo" class="header-logo"
+                     onerror="this.onerror=null;this.src='https://placehold.co/200x60/CCCCCC/FFFFFF?text=Logo+Loi';this.alt='Lỗi tải Logo';">
+            </a>
+            <nav class="flex items-center space-x-1 sm:space-x-2 md:space-x-3">
+                <a href="#features" class="text-gray-600 hover:text-green-600 px-1 py-2 sm:px-2 md:px-3 rounded-md text-xs sm:text-sm font-medium">Đặc Điểm</a>
+                <a href="#product-info-details" class="text-gray-600 hover:text-green-600 px-1 py-2 sm:px-2 md:px-3 rounded-md text-xs sm:text-sm font-medium">Chi Tiết</a>
+                <a href="#gallery" class="text-gray-600 hover:text-green-600 px-1 py-2 sm:px-2 md:px-3 rounded-md text-xs sm:text-sm font-medium">Hình Ảnh</a>
+                <a href="#product-video" class="text-gray-600 hover:text-green-600 px-1 py-2 sm:px-2 md:px-3 rounded-md text-xs sm:text-sm font-medium">Video</a>
+                <a href="#qr-zalo" class="text-gray-600 hover:text-green-600 px-1 py-2 sm:px-2 md:px-3 rounded-md text-xs sm:text-sm font-medium">Zalo</a>
+                <a href="#order" class="text-gray-600 hover:text-green-600 px-1 py-2 sm:px-2 md:px-3 rounded-md text-xs sm:text-sm font-medium">Đặt Hàng</a>
+                <a href="tel:0943242424" class="ml-1 sm:ml-2 md:ml-4 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-2 sm:px-3 md:px-4 rounded-lg shadow-sm transition duration-300 text-xs sm:text-sm">
+                    Gọi: 0943242424
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="heroSection" class="hero-bg text-white py-0"> 
+        <div class="hero-content container mx-auto px-6 text-center py-20 md:py-0"> 
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                Lốp LINGLONG 195/55R15 COMFORT MASTER
+            </h1>
+            <p class="text-lg md:text-2xl mb-10 max-w-3xl mx-auto">
+                Trải nghiệm sự êm ái, an toàn vượt trội và độ bền tối ưu cho mọi hành trình của bạn!
+            </p>
+            <a href="#order" class="cta-button">
+                Đặt Mua Ngay & Nhận Ưu Đãi
+            </a>
+        </div>
+    </section>
+
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8">Lốp Xe Của Bạn Đây!</h2>
+            <div class="main-product-image-container mx-auto max-w-full md:max-w-2xl">
+                <img src="1.png" alt="Lốp LINGLONG 195/55R15 COMFORT MASTER - Ảnh chính" class="product-image-zoomable"
+                     onerror="this.onerror=null;this.src='https://placehold.co/800x600/FF0000/FFFFFF?text=Loi+Tai+Anh+1.png';this.alt='Lỗi tải ảnh 1.png';">
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Tại Sao Chọn LINGLONG COMFORT MASTER?</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="flex items-center justify-center w-16 h-16 bg-green-100 text-green-600 rounded-full mb-4 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 text-center">Êm Ái Vượt Trội</h3>
+                    <p class="text-gray-600 text-center">Thiết kế đặc biệt giảm thiểu tiếng ồn và rung động, mang lại hành trình thoải mái tối đa.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="flex items-center justify-center w-16 h-16 bg-green-100 text-green-600 rounded-full mb-4 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 text-center">An Toàn Tối Đa</h3>
+                    <p class="text-gray-600 text-center">Rãnh gai tối ưu hóa độ bám đường, đảm bảo vận hành an toàn trên cả đường khô và ướt.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                     <div class="flex items-center justify-center w-16 h-16 bg-green-100 text-green-600 rounded-full mb-4 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 text-center">Độ Bền Cao</h3>
+                    <p class="text-gray-600 text-center">Hợp chất cao su tiên tiến giúp kéo dài tuổi thọ lốp, tiết kiệm chi phí thay thế.</p>
+                </div>
+                 <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 md:col-span-1 lg:col-span-3">
+                    <div class="flex items-center justify-center w-16 h-16 bg-green-100 text-green-600 rounded-full mb-4 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 text-center">Kích Thước Chuẩn 195/55R15</h3>
+                    <p class="text-gray-600 text-center">Phù hợp với nhiều dòng xe sedan và hatchback phổ biến trên thị trường Việt Nam.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="product-info-details" class="py-16 bg-white info-section">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">
+                LỐP LINGLONG 195/55R15 – GAI COMFORT MASTER
+            </h2>
+            <p class="text-xl text-center text-green-700 font-semibold mb-10">
+                ÊM – BỀN – GIÁ DỄ CHỊU – HỢP XE PHỔ THÔNG
+            </p>
+
+            <div class="max-w-4xl mx-auto bg-gray-50 p-8 rounded-xl shadow-lg">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Lắp được cho các dòng xe:</h3>
+                <ul>
+                    <li>Ford Ecosport</li>
+                    <li>Honda Civic</li>
+                    <li>Hyundai i20</li>
+                    <li>Một số mẫu sedan/hatchback cỡ nhỏ khác</li>
+                </ul>
+
+                <h3>ƯU ĐIỂM CỦA DÒNG COMFORT MASTER:</h3>
+                <ul>
+                    <li>Êm ái, giảm ồn rõ rệt khi chạy phố</li>
+                    <li>Bám đường tốt – kể cả khi mưa hoặc phanh gấp</li>
+                    <li>Gai sâu, ít mòn lệch – đi lâu mới phải thay</li>
+                    <li>Tiết kiệm nhiên liệu – nhẹ xe</li>
+                </ul>
+
+                <h3 class="text-orange-500">KHUYẾN MÃI THÁNG 5:</h3>
+                <ul>
+                    <li>Mua 2 lốp <span class="highlight">giảm 5%</span></li>
+                    <li>Mua 4 lốp <span class="highlight">giảm 10%</span></li>
+                    <li>Giao hàng tận nơi toàn quốc</li>
+                    <li><span class="highlight">Miễn phí</span> lắp đặt & cân mâm tại TP.HCM</li>
+                </ul>
+
+                <h3>BẢO HÀNH VÀNG – DUY NHẤT TẠI LINGLONG:</h3>
+                <ul>
+                    <li><span class="highlight">7 năm</span> lỗi kỹ thuật → <span class="highlight">1 đổi 1</span></li>
+                    <li>Trong <span class="highlight">3 tháng đầu</span>, nếu cán đinh, ổ gà, tét hông → hỗ trợ đến <span class="highlight">30%</span> khi thay mới</li>
+                </ul>
+                <p class="mt-6 font-medium">
+                    Địa chỉ: <a href="https://maps.app.goo.gl/XmxbiaNokZc3eowE9" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">Xem bản đồ</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-16 bg-gray-50"> 
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Hình Ảnh Thực Tế Sản Phẩm</h2>
+            <div class="gallery-container">
+                <div class="gallery-item"> 
+                    <img src="2.png" alt="Chi tiết lốp Linglong Comfort Master - Ảnh 2" onerror="this.onerror=null;this.src='https://placehold.co/600x450/FF0000/FFFFFF?text=Loi+Tai+Anh+2.png';this.alt='Lỗi tải ảnh 2.png';">
+                </div>
+                <div class="gallery-item">
+                    <img src="3.png" alt="Chi tiết lốp Linglong Comfort Master - Ảnh 3" onerror="this.onerror=null;this.src='https://placehold.co/600x450/FF0000/FFFFFF?text=Loi+Tai+Anh+3.png';this.alt='Lỗi tải ảnh 3.png';">
+                </div>
+                <div class="gallery-item">
+                    <img src="4.png" alt="Chi tiết lốp Linglong Comfort Master - Ảnh 4" onerror="this.onerror=null;this.src='https://placehold.co/600x450/FF0000/FFFFFF?text=Loi+Tai+Anh+4.png';this.alt='Lỗi tải ảnh 4.png';">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="product-video" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Video Giới Thiệu Lốp LINGLONG COMFORT MASTER</h2>
+            <div class="max-w-3xl mx-auto bg-black rounded-xl shadow-2xl overflow-hidden">
+                <div class="aspect-w-16 aspect-h-9">
+                    <iframe
+                        class="w-full h-full"
+                        src="https://www.youtube.com/embed/2"  
+                        title="Video Giới Thiệu Lốp Linglong Comfort Master"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            <p class="mt-6 text-center text-gray-600 text-sm">
+                Video được nhúng từ YouTube.
+            </p>
+        </div>
+    </section>
+    <section id="qr-zalo" class="py-16 bg-gray-50"> 
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8">Liên Hệ Qua Zalo</h2>
+            <p class="text-gray-600 mb-10 max-w-xl mx-auto">Quét mã QR dưới đây để kết nối Zalo với chúng tôi và nhận tư vấn nhanh chóng!</p>
+            <div class="flex justify-center">
+                <img src="qr.jpg" alt="Mã QR Zalo LINGLONG TIRE" class="qr-code-image"
+                     onerror="this.onerror=null;this.src='https://placehold.co/200x200/FF0000/FFFFFF?text=Loi+QR';this.alt='Lỗi tải mã QR Zalo';">
+            </div>
+            <p class="mt-4 text-gray-500 text-sm">Hoặc liên hệ trực tiếp qua SĐT: <a href="tel:0943242424" class="text-green-600 hover:underline">0943 24 24 24</a></p>
+        </div>
+    </section>
+
+    <section id="order" class="py-16 bg-green-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-2">Đặt Hàng Ngay!</h2>
+            <p class="text-center text-gray-600 mb-10">Điền thông tin dưới đây, chúng tôi sẽ liên hệ với bạn sớm nhất.</p>
+            
+            <div class="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-2xl">
+                <form id="orderForm">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="fullName" class="form-label">Họ và Tên <span class="text-red-500">*</span></label>
+                            <input type="text" id="fullName" name="fullName" class="form-input" placeholder="Nguyễn Văn A" required>
+                        </div>
+                        <div>
+                            <label for="phoneNumber" class="form-label">Số Điện Thoại <span class="text-red-500">*</span></label>
+                            <input type="tel" id="phoneNumber" name="phoneNumber" class="form-input" placeholder="09XXXXXXXX" pattern="[0-9]{10}" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="addressStreet" class="form-label">Địa chỉ giao hàng (Số nhà, Đường) <span class="text-red-500">*</span></label>
+                        <input type="text" id="addressStreet" name="addressStreet" class="form-input" placeholder="123 Đường ABC" required>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                        <div>
+                            <label for="addressWard" class="form-label">Phường/Xã <span class="text-red-500">*</span></label>
+                            <input type="text" id="addressWard" name="addressWard" class="form-input" placeholder="Phường XYZ" required>
+                        </div>
+                        <div>
+                            <label for="addressDistrict" class="form-label">Quận/Huyện <span class="text-red-500">*</span></label>
+                            <input type="text" id="addressDistrict" name="addressDistrict" class="form-input" placeholder="Quận KLM" required>
+                        </div>
+                        <div>
+                            <label for="addressCity" class="form-label">Tỉnh/Thành phố <span class="text-red-500">*</span></label>
+                            <input type="text" id="addressCity" name="addressCity" class="form-input" placeholder="TP. Hồ Chí Minh" required>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <label for="notes" class="form-label">Ghi Chú Thêm</label>
+                        <textarea id="notes" name="notes" rows="3" class="form-input" placeholder="Ví dụ: Giao hàng vào giờ hành chính..."></textarea>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button type="submit" id="submitButton" class="submit-button">
+                            Gửi Đơn Hàng
+                            <span id="formSpinner" class="loader" style="display: none;"></span>
+                        </button>
+                    </div>
+                </form>
+                <p class="text-xs text-gray-500 mt-6 text-center">Chúng tôi cam kết bảo mật thông tin của bạn theo quy định.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-800 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">Cần Tư Vấn Thêm?</h2>
+            <p class="text-lg mb-8">Đừng ngần ngại, hãy gọi ngay cho chúng tôi để được hỗ trợ tốt nhất!</p>
+            <a href="tel:0943242424" 
+               class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-10 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-xl">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2 -mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.308 1.154a11.042 11.042 0 005.516 5.516l1.154-2.308a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                Gọi Ngay: 0943 24 24 24
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-400 py-10">
+        <div class="container mx-auto px-6 text-center">
+            <p>© <span id="currentYear"></span> LINGLONG TIRE VIETNAM. All rights reserved.</p>
+            <p class="text-sm mt-2">Hotline hỗ trợ: <a href="tel:0943242424" class="hover:text-green-400">0943 24 24 24</a></p>
+            <p class="text-xs mt-1">Website được thiết kế để giới thiệu sản phẩm LINGLONG 195/55R15 COMFORT MASTER.</p>
+        </div>
+    </footer>
+
+    <div id="submissionModal" class="modal">
+        <div class="modal-content">
+            <h3 id="modalTitle" class="text-2xl font-semibold mb-4"></h3>
+            <p id="modalMessage" class="text-gray-700 mb-6"></p>
+            <button id="closeModalButton" class="modal-close-button">Đóng</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        const orderForm = document.getElementById('orderForm');
+        const modal = document.getElementById('submissionModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalMessage = document.getElementById('modalMessage');
+        const closeModalButton = document.getElementById('closeModalButton');
+        const submitButton = document.getElementById('submitButton');
+        const formSpinner = document.getElementById('formSpinner');
+
+        // !!! QUAN TRỌNG: THAY THẾ BẰNG URL WEB APP GOOGLE APPS SCRIPT CỦA BẠN !!!
+        const googleSheetScriptURL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE'; 
+        // Ví dụ: const googleSheetScriptURL = 'https://script.google.com/macros/s/ABCDEFG1234567/exec';
+
+
+        orderForm.addEventListener('submit', async function(event) {
+            event.preventDefault(); 
+
+            if (!orderForm.checkValidity()) {
+                showModal('Lỗi!', 'Vui lòng điền đầy đủ các trường thông tin bắt buộc (*).');
+                orderForm.reportValidity(); 
+                return;
+            }
+            
+            submitButton.disabled = true;
+            formSpinner.style.display = 'inline-block';
+
+            const formData = new FormData(orderForm);
+            
+            try {
+                if (googleSheetScriptURL === 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE' || !googleSheetScriptURL) {
+                    console.error("Lỗi: URL Google Apps Script chưa được cấu hình.");
+                    showModal('Lỗi Cấu Hình!', 'URL để gửi dữ liệu đến Google Sheet chưa được thiết lập. Vui lòng liên hệ quản trị viên.');
+                    submitButton.disabled = false;
+                    formSpinner.style.display = 'none';
+                    return;
+                }
+
+                const response = await fetch(googleSheetScriptURL, {
+                    method: 'POST',
+                    body: formData 
+                });
+                
+                const result = await response.json();
+
+                if (result.result === "success") {
+                    showModal('Đặt Hàng Thành Công!', 'Cảm ơn bạn đã đặt hàng! Chúng tôi sẽ liên hệ với bạn sớm nhất để xác nhận đơn hàng.');
+                    orderForm.reset(); 
+                } else {
+                    console.error("Lỗi từ Google Apps Script:", result.message, result.error);
+                    showModal('Gửi Đơn Hàng Thất Bại!', 'Đã có lỗi xảy ra khi gửi thông tin. Vui lòng thử lại sau hoặc liên hệ trực tiếp. Chi tiết lỗi: ' + (result.message || 'Không rõ lỗi'));
+                }
+
+            } catch (error) {
+                console.error('Lỗi khi gửi form:', error);
+                showModal('Gửi Đơn Hàng Thất Bại!', 'Đã có lỗi kết nối xảy ra. Vui lòng kiểm tra lại đường truyền và thử lại. Chi tiết: ' + error.message);
+            } finally {
+                submitButton.disabled = false;
+                formSpinner.style.display = 'none';
+            }
+        });
+
+        function showModal(title, message) {
+            modalTitle.textContent = title;
+            modalMessage.textContent = message;
+            modal.style.display = "block";
+        }
+
+        closeModalButton.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetElement = document.querySelector(this.getAttribute('href'));
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
