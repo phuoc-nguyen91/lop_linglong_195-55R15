@@ -24,8 +24,14 @@
         .form-label {
             @apply block text-sm font-medium text-gray-700 mb-1;
         }
-        .cta-button {
+        .cta-button { /* General Call to Action button style */
             @apply w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105 text-lg;
+        }
+        .youtube-button { /* Specific style for YouTube link button */
+            @apply inline-flex items-center justify-center bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105 text-lg;
+        }
+        .youtube-button svg {
+            @apply w-6 h-6 mr-2;
         }
         .submit-button {
              @apply w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105 text-lg;
@@ -291,22 +297,17 @@
     </section>
 
     <section id="product-video" class="py-16 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Video Giới Thiệu Lốp LINGLONG COMFORT MASTER</h2>
-            <div class="max-w-3xl mx-auto bg-black rounded-xl shadow-2xl overflow-hidden">
-                <div class="aspect-w-16 aspect-h-9">
-                    <iframe
-                        class="w-full h-full"
-                        src="https://www.youtube.com/watch?v=0li-DeaokNk"  
-                        title="Video Giới Thiệu Lốp Linglong Comfort Master"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen>
-                    </iframe>
-                </div>
+        <div class="container mx-auto px-6 text-center"> <h2 class="text-3xl font-bold text-gray-800 mb-12">Video Giới Thiệu Lốp LINGLONG COMFORT MASTER</h2>
+            <div class="max-w-3xl mx-auto">
+                 <a href="https://www.youtube.com/shorts/5ryxCu5A0qY" target="_blank" rel="noopener noreferrer" class="youtube-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.78 22 12 22 12s0 3.22-.42 4.814a2.504 2.504 0 01-1.768 1.768c-1.594.42-6.392.42-6.392.42s-4.798 0-6.392-.42a2.504 2.504 0 01-1.768-1.768C2.002 15.22 2 12 2 12s0-3.22.42-4.814a2.504 2.504 0 011.768-1.768C5.78 2.002 10.578 2 10.578 2s4.798 0 6.392.42M9.75 15.5V8.5l6 3.5-6 3.5z" clip-rule="evenodd"></path>
+                    </svg>
+                    Xem Video trên YouTube
+                </a>
             </div>
-            <p class="mt-6 text-center text-gray-600 text-sm">
-                Video được nhúng từ YouTube.
+            <p class="mt-6 text-gray-600 text-sm">
+                Nhấp vào nút trên để xem video giới thiệu sản phẩm trên YouTube.
             </p>
         </div>
     </section>
